@@ -10,6 +10,7 @@
 template<class T>
 class Deck {
     public:
+        Deck() {}
         Deck(const std::vector<T>& otherdeck) : deck(otherdeck) {};
         Deck(const Deck<T>& otherdeck): 
             deck(otherdeck.deck),
@@ -51,7 +52,7 @@ class Deck {
             std::random_shuffle (deck.begin(), deck.end() );
             // empty discard pile
             discardPile.clear();
-            return
+            return;
         };
 
         // for sanity checks... need to define the << operator for fancy types
